@@ -1,4 +1,10 @@
-angular.module('angular-feedparser', ['xml']).service('feedparser', function(x2js) {
+angular.module('angular-feedparser', []);
+
+angular.module('angular-feedparser').service('x2js', function() {
+   return new X2JS();
+});
+
+angular.module('angular-feedparser').service('feedparser', function(x2js) {
    var me = this;
    
    me.parse = function(xmldata) {

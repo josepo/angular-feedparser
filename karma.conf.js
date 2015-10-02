@@ -18,7 +18,6 @@ module.exports = function(config) {
       'bower_components/angular/angular.js',
       'bower_components/angular-mocks/angular-mocks.js',
       'bower_components/x2js/xml2json.js',
-      'bower_components/angular-xml/angular-xml.js',
       
       'angular-feedparser.js',
       'test/*.spec.js',
