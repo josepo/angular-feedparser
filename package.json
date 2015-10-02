@@ -1,0 +1,39 @@
+{
+  "name": "angular-feedparser",
+  "version": "0.0.1",
+  "description": "Feed parser for AngularJS",
+  "main": "angular-feedparser.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.13.10",
+    "karma-jasmine": "^0.3.6",
+    "karma-ng-html2js-preprocessor": "^0.1.2"
+  },
+  "devDependencies": {
+    "karma-chrome-launcher": "^0.2.0"
+  },
+  "scripts": {
+    "test": "karma start karma.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josepo/angular-feedparser.git"
+  },
+  "keywords": [
+    "feed",
+    "atom",
+    "rss",
+    "parser",
+    "xml",
+    "angular"
+  ],
+  "author": "Josepo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/josepo/angular-feedparser/issues"
+  },
+  "homepage": "https://github.com/josepo/angular-feedparser#readme"
+}

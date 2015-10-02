@@ -1,12 +1,14 @@
 'use strict';
 
 describe('[angular-feedparser] ', function () {
-  var feedparser;
+  var feedparser, templateCache;
   
   beforeEach(function() {
     module('angular-feedparser');
-      
-    inject(function($injector) {
+    module('test/data/atom.xml');
+    
+    inject(function($injector, $templateCache) {
+      templateCache = $templateCache;
       feedparser = $injector.get('feedparser');
     });
   });

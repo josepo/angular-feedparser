@@ -4,4 +4,7 @@ Provides an Angular service feedparser that will parse ATOM and RSS files.
 
 ### Install
 
-`bower`
+### Test
+
+You can run the tests with
+`karma start karma.conf.js`
