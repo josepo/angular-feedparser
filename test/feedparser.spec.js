@@ -13,7 +13,20 @@ describe('[angular-feedparser] ', function () {
     });
   });
   
-  it('hello world test', function() {
-    expect(feedparser.hello()).toBe('Hello world');
+  describe('atom > ', function() {
+    var atom;
+    
+    beforeEach(function() {
+      atom = templateCache.get('test/data/atom.xml');
+    });
+    
+    it('should get meta info', function() {
+      var info = feedparser.parse(atom);
+      
+      expect(info.title).toBe('Alexandra Franzen');
+      expect(info.subtitle).toBeUndefined();
+      expect(info.updated).toEqual(new Date('2015-09-30T05:57:45Z'));
+    });
   });
+
 });
