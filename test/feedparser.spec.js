@@ -5,7 +5,8 @@ describe('[angular-feedparser] ', function () {
   
   beforeEach(function() {
     module('angular-feedparser');
-    module('test/data/atom.xml');
+    module('test/data/atom1.xml');
+    module('test/data/rss2.xml');
     
     inject(function($injector, $templateCache) {
       templateCache = $templateCache;
@@ -13,14 +14,38 @@ describe('[angular-feedparser] ', function () {
     });
   });
   
-  describe('atom > ', function() {
+  describe('rss 2.0 > ', function() {
+    var rss;
+    
+    beforeEach(function() {
+      rss = templateCache.get('test/data/rss2.xml');
+    });
+    
+    it('meta info', function() {
+      var info = feedparser.parse(rss);
+      
+      expect(info.title).toBe('All The Rage');
+      expect(info.subtitle).toBe('Committed to the power of the evidential narrative');
+      expect(info.updated).toEqual(new Date('Wed, 16 Sep 2015 06:27:03 +0000'));
+    });
+    
+    it('entries basic info', function() {
+      var entries = feedparser.parse(rss).entries;
+      
+      expect(entries.length).toBe(9);
+      expect(entries[0].title).toBe('So you want to order coffee in Spain');
+      expect(entries[0].link).toBe('https://daurmith.wordpress.com/2012/04/18/so-you-want-to-order-coffee-in-spain/');
+    });    
+  });
+  
+  describe('atom 1.0 > ', function() {
     var atom;
     
     beforeEach(function() {
-      atom = templateCache.get('test/data/atom.xml');
+      atom = templateCache.get('test/data/atom1.xml');
     });
     
-    it('should get meta info', function() {
+    it('meta info', function() {
       var info = feedparser.parse(atom);
       
       expect(info.title).toBe('Alexandra Franzen');
@@ -28,14 +53,12 @@ describe('[angular-feedparser] ', function () {
       expect(info.updated).toEqual(new Date('2015-09-30T05:57:45Z'));
     });
     
-    it('should get entries info', function() {
+    it('entries basic info', function() {
       var entries = feedparser.parse(atom).entries;
       
       expect(entries.length).toBe(10);
       expect(entries[0].title).toBe('Show some respect for the brave.');
       expect(entries[0].link).toBe('http://www.alexandrafranzen.com/2015/09/29/respect/');
-      expect(entries[0].content).toBeDefined();
     });
   });
-
 });
