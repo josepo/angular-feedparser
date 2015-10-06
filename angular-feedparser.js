@@ -32,7 +32,8 @@ angular.module('angular-feedparser').service('feedparser', function(x2js) {
     feedEntries.forEach(function(entry) {
       entries.push({
         title: rss ? entry.title : entry.title.__cdata,
-        link: rss ? entry.link : getAtomLink(entry)
+        link: rss ? entry.link : getAtomLink(entry),
+        updated: new Date(rss ? entry.pubDate : entry.updated)
       });
     });
 

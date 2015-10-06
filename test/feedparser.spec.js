@@ -35,6 +35,7 @@ describe('[angular-feedparser] ', function () {
       expect(entries.length).toBe(9);
       expect(entries[0].title).toBe('So you want to order coffee in Spain');
       expect(entries[0].link).toBe('https://daurmith.wordpress.com/2012/04/18/so-you-want-to-order-coffee-in-spain/');
+      expect(entries[0].updated).toEqual(new Date('Wed, 18 Apr 2012 14:26:27 +0000'));
     });    
   });
   
@@ -59,6 +60,7 @@ describe('[angular-feedparser] ', function () {
       expect(entries.length).toBe(10);
       expect(entries[0].title).toBe('Show some respect for the brave.');
       expect(entries[0].link).toBe('http://www.alexandrafranzen.com/2015/09/29/respect/');
+      expect(entries[0].updated).toEqual(new Date('2015-09-30T01:18:45Z'));
     });
   });
 });
