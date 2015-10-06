@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns="http://purl.org/rss/1.0/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+>
+
+	<channel rdf:about="http://daurmith.blogalia.com/rdf.xml">
+		<title>La Biblioteca de Babel</title>
+		<link>http://daurmith.blogalia.com/</link>
+		<description>La Biblioteca de Babel el blog de Daurmith sobre ciencia</description>
+		<dc:language>es-ES</dc:language>
+		<dc:rights>Copyright Morwen</dc:rights>
+		<dc:publisher>Morwen</dc:publisher>
+  		<dc:creator>Morwen</dc:creator>
+		<items>
+			<rdf:Seq>
+								<rdf:li resource="http://daurmith.blogalia.com//historias/75874" />
+				<rdf:li resource="http://daurmith.blogalia.com//historias/75852" />
+				<rdf:li resource="http://daurmith.blogalia.com//historias/75847" />
+				<rdf:li resource="http://daurmith.blogalia.com//historias/75841" />
+				<rdf:li resource="http://daurmith.blogalia.com//historias/75840" />
+				<rdf:li resource="http://daurmith.blogalia.com//historias/75836" />
+				<rdf:li resource="http://daurmith.blogalia.com//historias/75826" />
+				<rdf:li resource="http://daurmith.blogalia.com//historias/75825" />
+				<rdf:li resource="http://daurmith.blogalia.com//historias/75822" />
+				<rdf:li resource="http://daurmith.blogalia.com//historias/75812" />
+
+			</rdf:Seq>
+		</items>
+	</channel>
+
+	<item rdf:about="http://daurmith.blogalia.com//historias/75874">
+		<title>Explicaciones</title>
+		<link>http://daurmith.blogalia.com//historias/75874</link>
+		<description>Ya habréis visto que El Trato&amp;trade; está en suspenso y que la semana pasada no es que no subiera
+		tres entradas, es que no subí ni una. El por qué es senci</description>
+	</item>
+
+	<item rdf:about="http://daurmith.blogalia.com//historias/75852">
+		<title>Hoy</title>
+		<link>http://daurmith.blogalia.com//historias/75852</link>
+		<description>Bueno, pues hoy es el día. Hoy por </description>
+	</item>
+
+</rdf:RDF>

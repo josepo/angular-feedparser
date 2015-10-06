@@ -7,11 +7,37 @@ describe('[angular-feedparser] ', function () {
     module('angular-feedparser');
     module('test/data/atom1.xml');
     module('test/data/rss2.xml');
+    module('test/data/rdf1.xml');
     
     inject(function($injector, $templateCache) {
       templateCache = $templateCache;
       feedparser = $injector.get('feedparser');
     });
+  });
+  
+  describe('rdf 1.0 > ', function() {
+    var rdf;
+    
+    beforeEach(function() {
+      rdf = templateCache.get('test/data/rdf1.xml').toString();
+    });
+    
+    it('meta info', function() {
+      var info = feedparser.parse(rdf);
+      
+      expect(info.title).toBe('La Biblioteca de Babel');
+      expect(info.subtitle).toBe('La Biblioteca de Babel el blog de Daurmith sobre ciencia');
+      expect(info.updated).toBeUndefined();
+    });
+    
+    it('entries basic info', function() {
+      var entries = feedparser.parse(rdf).entries;
+      
+      expect(entries.length).toBe(2);
+      expect(entries[0].title).toBe('Explicaciones');
+      expect(entries[0].link).toBe('http://daurmith.blogalia.com//historias/75874');
+      expect(entries[0].updated).toBeUndefined();
+    });   
   });
   
   describe('rss 2.0 > ', function() {
