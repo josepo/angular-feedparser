@@ -5,6 +5,8 @@ Uses encapsulation for library x2js provided by https://github.com/abdmob/x2js
 
 ### Install
 
+`bower install josepo/angular-feedparser`
+
 ### Test
 
 You can run the tests with

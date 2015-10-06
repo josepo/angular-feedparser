@@ -6,7 +6,7 @@
     "Josepo <jlpolo@gmail.com>"
   ],
   "description": "Feed parser for AngularJS",
-  "main": "angular-feedparser.js",
+  "main": "./angular-feedparser.js",
   "keywords": [
     "feed",
     "atom",
