@@ -11,7 +11,7 @@ angular.module('angular-feedparser').factory('rssparser', function() {
     feedEntries.forEach(function(entry) {
       entries.push({
         title: entry.title,
-        link: entry.link,
+        url: entry.link,
         updated: new Date(entry.pubDate)
       });
     });    
@@ -40,7 +40,7 @@ angular.module('angular-feedparser').factory('rdfparser', function() {
     feedEntries.forEach(function(entry) {
       entries.push({
         title: entry.title,
-        link: entry.link
+        url: entry.link
       });
     });    
     
@@ -83,7 +83,7 @@ angular.module('angular-feedparser').factory('atomparser', function() {
     feedEntries.forEach(function(entry) {
       entries.push({
         title: entry.title.__cdata,
-        link: getAtomLink(entry),
+        url: getAtomLink(entry),
         updated: new Date(entry.updated)
       });
     });    
